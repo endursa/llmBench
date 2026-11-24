@@ -63,3 +63,21 @@ Die Tempowerte stammen aus unterschiedlichen Prompts und sind nur grob vergleich
 
 `results/ergebnis_<lauf>.json` je Lauf. Noch nachzutragen (liegen auf dem Testrechner): `q27-medium-S`, `q27-low-S`,
 `inkling-*`, `qwen27b`, `q27-v30`, `q27-v31`.
+
+
+## Einheitliche Tempo-Messung (24.11.2026)
+
+Gleiche Prompts fuer alle Profile (tempo_messung.py), Median aus 3 Laeufen, Ausgabe-tok/s aus den llama.cpp-Timings.
+
+| Profil | Code tok/s (Median, min–max) | Prosa tok/s (Median, min–max) | Mittel | Draft-Quote Code/Prosa |
+|---|---|---|---|---|
+| gemma-4-26b-a4b-mtp | 316 (308–334) | 263 (260–266) | 289 | 63 % / 48 % |
+| gemma-4-26b-a4b | 189 (187–189) | 189 (189–189) | 189 | – / – |
+| gemma-4-26b-a4b-nothink | 321 (321–322) | 262 (260–264) | 292 | 62 % / 43 % |
+| qwen3.8-27b | 122 (121–122) | 100 (98–100) | 111 | 75 % / 55 % |
+| qwen3.8-27b-heretic | 95 (94–95) | 83 (83–83) | 89 | 48 % / 38 % |
+| qwen3.8-flash-next-gyro-gyro-s | 140 (112–159) | 130 (110–138) | 135 | 72 % / 52 % |
+| inkling-2-mini-unsloth | 111 (111–112) | 64 (64–64) | 88 | 48 % / 10 % |
+| inkling-2-mini-mainline | 70 (70–70) | 70 (70–70) | 70 | – / – |
+
+Auffaellig: Inkling mit DSpark ist bei Prosa langsamer als ohne (64 statt 70 tok/s, 10 % Entwurfsquote). Rohdaten: results/tempo_2026-11-24.json
