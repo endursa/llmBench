@@ -10,6 +10,7 @@ Nur Python ≥ 3.9 und die Standardbibliothek – keine Installation, keine Admi
 | --- | --- |
 | `qualitaetstest.py` | Testlauf (`run`), Modellliste (`models`), Vergleichsbericht (`compare`) |
 | `aufgaben_schwer.py` | Schwere Runde: 8 Programmieraufgaben + 4 Rechenfragen mit Sollwerten |
+| `tempo_messung.py` | Einheitliche Tempo-Messung: gleiche Prompts (Code, Prosa), 3 Wiederholungen, Median je Modell |
 | `docs/TESTS.md` | Beschreibung aller Aufgaben, Bewertung, Grenzen, Änderungshistorie |
 | `docs/ERGEBNISSE.md` | Ergebnisse auf RTX 4090 (13.–24.11.2026) |
 | `results/` | Rohdaten je Lauf (`ergebnis_<label>.json`) inkl. generiertem Code und Antworten |
